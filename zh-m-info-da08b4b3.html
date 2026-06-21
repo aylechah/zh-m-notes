@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼体育 · 稳定入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fbe9d7 0%, #f5d5b0 50%, #ecc19a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+            color: #3b2a1c;
+        }
+
+        .page-wrap {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 248, 240, 0.5);
+            backdrop-filter: blur(2px);
+            border-radius: 48px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 40px -12px rgba(120, 70, 30, 0.25);
+        }
+
+        /* hero 区 —— 杂志横幅 */
+        .hero {
+            background: linear-gradient(135deg, #fff2e0, #ffe7d0);
+            border-radius: 36px;
+            padding: 3rem 2.5rem 2.8rem;
+            margin-bottom: 3rem;
+            box-shadow: inset 0 1px 4px rgba(255, 245, 230, 0.8), 0 8px 20px rgba(150, 90, 40, 0.12);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "✦";
+            font-size: 2.4rem;
+            color: #d9a066;
+            opacity: 0.3;
+            position: absolute;
+            right: 2rem;
+            bottom: 0.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            background: linear-gradient(to right, #7f5539, #a2674a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.6rem;
+            word-break: break-word;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5f4230;
+            max-width: 700px;
+            margin: 0.8rem auto 0;
+            background: rgba(255, 235, 215, 0.5);
+            padding: 0.6rem 1.2rem;
+            border-radius: 60px;
+            display: inline-block;
+        }
+
+        /* 背景说明卡片 */
+        .bg-note {
+            background: #ffffffd9;
+            backdrop-filter: blur(4px);
+            border-radius: 28px;
+            padding: 2rem 2.4rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 6px 16px rgba(140, 85, 40, 0.08);
+            border: 1px solid #f5e3d0;
+        }
+
+        .bg-note h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #7f5539;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .bg-note h2::before {
+            content: "📖";
+            font-size: 1.6rem;
+        }
+
+        .bg-note p {
+            margin-bottom: 1.2rem;
+            color: #4b3828;
+        }
+
+        .bg-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 三段式介绍 —— 杂志专题 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin: 2.4rem 0 2.8rem;
+        }
+
+        .feature-item {
+            background: #ffffffdb;
+            backdrop-filter: blur(2px);
+            border-radius: 28px;
+            padding: 1.8rem 2.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 1.5rem;
+            box-shadow: 0 4px 12px rgba(160, 100, 50, 0.08);
+            border-left: 6px solid #dbaa7a;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(130, 75, 35, 0.12);
+            border-left-color: #b88356;
+        }
+
+        .feature-icon {
+            font-size: 2.6rem;
+            min-width: 3.2rem;
+            line-height: 1.2;
+            color: #a67a56;
+        }
+
+        .feature-text {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .feature-text h3 {
+            font-size: 1.3rem;
+            font-weight: 550;
+            color: #6a4b33;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-text p {
+            color: #4c3829;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-text .highlight-link {
+            color: #a2674a;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid #eacab0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .feature-text .highlight-link:hover {
+            color: #7f5539;
+            border-bottom-color: #7f5539;
+        }
+
+        /* 页尾访问提示 */
+        .footer-access {
+            background: #fff5eb;
+            border-radius: 48px;
+            padding: 2rem 2.2rem;
+            margin-top: 2.2rem;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(140, 80, 35, 0.08);
+            border: 1px solid #eddac6;
+        }
+
+        .footer-access p {
+            font-size: 1.1rem;
+            color: #4f3827;
+            max-width: 600px;
+            margin: 0 auto 1rem;
+        }
+
+        .footer-access .btn-link {
+            display: inline-block;
+            background: linear-gradient(to right, #dbaa7a, #c28d62);
+            color: #2f1d10;
+            font-weight: 540;
+            font-size: 1.2rem;
+            padding: 0.6rem 2.4rem;
+            border-radius: 60px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(170, 100, 45, 0.15);
+            transition: background 0.25s, transform 0.15s, box-shadow 0.2s;
+            letter-spacing: 0.02em;
+            border: 1px solid #f5dcc6;
+        }
+
+        .footer-access .btn-link:hover {
+            background: linear-gradient(to right, #c99466, #b37c52);
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(140, 75, 30, 0.2);
+            color: #1f130c;
+        }
+
+        .footer-access .small-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #7a5d47;
+            opacity: 0.85;
+        }
+
+        /* 响应式 */
+        @media (max-width: 720px) {
+            .page-wrap {
+                padding: 1.6rem 0.8rem;
+                border-radius: 32px;
+            }
+
+            .hero {
+                padding: 2rem 1.2rem 2.2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .bg-note {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .feature-item {
+                padding: 1.4rem 1.2rem;
+                flex-direction: column;
+                gap: 0.6rem;
+                border-left-width: 4px;
+            }
+
+            .feature-icon {
+                font-size: 2rem;
+                min-width: 2.4rem;
+            }
+
+            .footer-access {
+                padding: 1.6rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .footer-access .btn-link {
+                font-size: 1rem;
+                padding: 0.5rem 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- 杂志式首页横幅 -->
+        <div class="hero">
+            <h1>乐鱼体育 · 稳定入口</h1>
+            <p>一个更清晰的页面说明与使用指引</p>
+        </div>
+
+        <!-- 背景说明 -->
+        <div class="bg-note">
+            <h2>关于这个页面</h2>
+            <p>许多朋友第一次接触 <strong>乐鱼体育</strong> 时，都希望找到一个直接、明确的访问方式。这个介绍页正是为此准备——它不承载复杂的跳转，而是以温和的叙述，帮你了解平台的背景、特点与常见感受。</p>
+            <p>我们相信，好的服务从透明的信息开始。下面的三段内容分别从不同侧面描绘了乐鱼体育的日常面貌，没有夸张的渲染，只有踏实的梳理。</p>
+        </div>
+
+        <!-- 三段自然介绍（杂志专题风格） -->
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🏟️</div>
+                <div class="feature-text">
+                    <h3>稳定的访问体验</h3>
+                    <p>无论你在哪个网络环境下，<a href="https://zh-m-leyusports.com.cn" class="highlight-link">乐鱼体育</a> 都维持着清晰的结构和响应速度。页面加载平顺，导航逻辑直观，减少了不必要的等待和疑惑。许多用户反馈说，第一次进入就能找到自己需要的版块。</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">📋</div>
+                <div class="feature-text">
+                    <h3>信息一目了然</h3>
+                    <p>内容排列经过了细致梳理，把重点赛事、数据、互动区分别呈现。你不需要在多层菜单里翻找——从首页开始，各个模块的入口就自然展开。如果你喜欢简洁有序的布局，那么 <a href="https://zh-m-leyusports.com.cn" class="highlight-link">乐鱼体育</a> 的风格会让你感到轻松。</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-text">
+                    <h3>适合慢慢探索</h3>
+                    <p>不必急于一次看完所有内容。乐鱼体育的页面设计留出了呼吸感，文字与卡片之间保有合适的间距，阅读节奏可以由你自己掌控。从赛事日历到社区动态，每一步切换都自然流畅，没有突兀的弹窗或强迫式的引导。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="footer-access">
+            <p>如果你希望直接前往平台，下面的链接会带你到最新稳定的页面。</p>
+            <a href="https://zh-m-leyusports.com.cn" class="btn-link">乐鱼体育</a>
+            <div class="small-note">保持浏览器更新可获得更佳显示效果</div>
+        </div>
+    </div>
+</body>
+</html>
