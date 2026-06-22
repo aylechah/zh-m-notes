@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 产品与服务概览</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      background: #faf5ed;
+      color: #2b2a28;
+      line-height: 1.8;
+      padding: 2rem 1.25rem;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* 开场短句——像一枚书签 */
+    .opening-mark {
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      padding: 1.2rem 0 0.4rem;
+      border-bottom: 1px solid #dcccaf;
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #6b5b47;
+    }
+
+    .opening-mark::before {
+      content: "❧ ";
+      color: #b2957a;
+      font-size: 1.3rem;
+    }
+
+    /* 承接段落——简洁专业，信息密度稍高 */
+    .intro-text {
+      margin-bottom: 2.8rem;
+      font-size: 1.05rem;
+    }
+
+    .intro-text p {
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-text .highlight-link {
+      color: #7d634b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed #b2957a;
+    }
+
+    .intro-text .highlight-link:hover {
+      color: #4a3c2d;
+      border-bottom-style: solid;
+    }
+
+    /* 特点列表 —— 借用引用块/提示框的视觉 */
+    .feature-list {
+      background: #f0eade;
+      padding: 1.8rem 2rem;
+      border-radius: 4px;
+      margin: 2.4rem 0 2.8rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      border-left: 4px solid #b2957a;
+    }
+
+    .feature-list h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+      color: #4f4133;
+    }
+
+    .feature-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 0.5rem 0 0.5rem 1.8rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+      font-size: 0.98rem;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.4rem;
+      color: #7d634b;
+      font-weight: 700;
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+
+    .feature-list li strong {
+      color: #3d342b;
+    }
+
+    /* 温和结尾 — 类似引用块/提示框风格 */
+    .closing-block {
+      background: transparent;
+      border: 1px solid #dcccaf;
+      border-radius: 4px;
+      padding: 1.8rem 2rem;
+      margin: 2.8rem 0 2rem;
+      font-style: normal;
+    }
+
+    .closing-block p {
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+
+    .closing-block .small-note {
+      font-size: 0.88rem;
+      color: #6b5b47;
+      border-top: 1px solid #e2d5c4;
+      padding-top: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .closing-block .inline-link {
+      color: #7d634b;
+      text-decoration: none;
+      border-bottom: 1px dotted #b2957a;
+    }
+
+    .closing-block .inline-link:hover {
+      color: #3d342b;
+    }
+
+    /* 场景摘要 —— FAQ 式，但克制 */
+    .scenario-note {
+      margin: 1.8rem 0 2.5rem;
+      padding: 0 0.25rem;
+    }
+
+    .scenario-note details {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #e7ddd0;
+      padding-bottom: 0.6rem;
+    }
+
+    .scenario-note summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #3d342b;
+      padding: 0.25rem 0;
+      font-size: 0.98rem;
+    }
+
+    .scenario-note summary::marker {
+      color: #b2957a;
+    }
+
+    .scenario-note .answer {
+      margin-top: 0.25rem;
+      padding-left: 1.2rem;
+      color: #4f4133;
+      font-size: 0.95rem;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 560px) {
+      body {
+        padding: 1.25rem 0.9rem;
+      }
+      .feature-list {
+        padding: 1.4rem 1.2rem;
+      }
+      .closing-block {
+        padding: 1.4rem 1.2rem;
+      }
+      .opening-mark {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 开场短句 -->
+    <div class="opening-mark">一眼识别，一站知悉</div>
+
+    <!-- 承接段落：从用户快速识别用途的角度 -->
+    <div class="intro-text">
+      <p>
+        当您打开这个页面，大概率是想快速判断<a href="https://aiyouxi-company.com" class="highlight-link">爱游戏</a>是否与您关注的领域相关。简单来说，这是一家聚焦游戏产品运营、内容分发与轻量级互动服务的公司。团队持续打磨产品细节，为不同体量的合作伙伴提供可落地的数字娱乐解决方案。
+      </p>
+      <p>
+        不同于泛泛的游戏平台，<strong>爱游戏</strong>更看重产品的完成度与长期体验。从早期原型测试到正式版本迭代，每个环节都保留着对用户时间的尊重。您不必在繁杂的广告中寻找真实信息——这里的信息流、工具和社区触点，都围绕「高效识别、直接使用」展开。
+      </p>
+    </div>
+
+    <!-- 特点列表（引用块风格） -->
+    <div class="feature-list">
+      <h2>· 产品与服务的几个侧面</h2>
+      <ul>
+        <li><strong>内容精简</strong> — 每个游戏或工具页只保留必要说明、截图与系统要求，去掉冗余跳转。</li>
+        <li><strong>接口透明</strong> — 合作方接入时，提供可查阅的文档与沙盒环境，参数与限制一目了然。</li>
+        <li><strong>节奏可控</strong> — 不强制推送、不滥用弹窗；更新日志与活动预告以周为单位汇总。</li>
+        <li><strong>反馈闭环</strong> — 问题工单平均响应时间在 4 小时内（工作日），且回复包含可复现步骤或临时方案。</li>
+      </ul>
+    </div>
+
+    <!-- 场景摘要 / FAQ 片段 —— 真实克制，不夸大 -->
+    <div class="scenario-note">
+      <details>
+        <summary>适合哪些团队关注？</summary>
+        <div class="answer">中小型游戏研发组、独立开发者、以及希望做轻度联运的内容方。不设高门槛，但要求产品具备基本资质。</div>
+      </details>
+      <details>
+        <summary>是否提供试玩或演示？</summary>
+        <div class="answer">部分产品在其详情页内提供 HTML5 试玩或录屏演示，可以直接体验核心机制，无需注册。</div>
+      </details>
+    </div>
+
+    <!-- 温和结尾 —— 提示框风格 -->
+    <div class="closing-block">
+      <p>网站内容围绕「可验证、可追溯」的原则组织。如果您在意一款产品从设计到上线的实际路径，<a href="https://aiyouxi-company.com" class="inline-link">爱游戏</a>提供的信息值得花十分钟翻阅。</p>
+      <div class="small-note">没有注册门槛、不收集多余信息。可随时通过站内公开邮箱联系团队。</div>
+    </div>
+
+    <!-- 极简脚注，仅用于保持页面完整感，不破坏叙事 -->
+    <footer style="margin-top: 2.8rem; font-size: 0.8rem; color: #9c8b79; border-top: 1px solid #e7ddd0; padding-top: 1.2rem; text-align: right;">
+      爱游戏 · 公开页 · 最近更新 2025
+    </footer>
+  </div>
+</body>
+</html>
